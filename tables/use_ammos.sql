@@ -33,8 +33,8 @@ create table use_ammos (
   demon INT NOT NULL DEFAULT 0,
   armor INT NOT NULL DEFAULT 0,
   tranq INT NOT NULL DEFAULT 0,
-  CONSTRAINT fk_weapon_id
-    FOREIGN KEY fk_weapon_id(weapon_id)
+  CONSTRAINT fk_use_ammos_weapon_id
+    FOREIGN KEY fk_use_ammos_weapon_id(weapon_id)
     REFERENCES weapons (id)
     ON DELETE RESTRICT ON UPDATE CASCADE
-):
+);

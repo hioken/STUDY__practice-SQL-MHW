@@ -5,11 +5,14 @@ create table weapons (
   rarity INT NOT NULL,
   attack_power INT NOT NULL,
   arrinity FLOAT(4,3) NOT NULL DEFAULT 0,
-  element_type ENUM('none' , 'fire', 'water', 'ice', 'thunder', 'dragon', 'poison', 'paralysis', 'sleep', 'blast') NOT NULL DEFAULT 0,
+  element_type ENUM('none', 'fire', 'water', 'ice', 'thunder', 'dragon', 'poison', 'paralysis', 'sleep', 'blast') NOT NULL DEFAULT 'none',
   element_damege INT,
   defense INT,
+  elderseal INT NOT NULL DEFAULT 0,
+  custom INT,
   decoration_slot_1 INT NOT NULL DEFAULT 0,
   decoration_slot_2 INT NOT NULL DEFAULT 0,
   decoration_slot_3 INT NOT NULL DEFAULT 0,
-  grade INT
+  image VARCHAR(100),
+  weapon_group varchar(50) NOT NULL
 );
